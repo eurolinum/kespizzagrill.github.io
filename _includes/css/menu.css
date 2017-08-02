@@ -1,0 +1,20 @@
+.menu-dish-container {
+    margin-top:15px;
+}
+
+.menu-dish {
+    border-bottom: 1px solid #f3f1ed;
+    box-sizing:border-box;
+}
+
+.menu-dish .menu-dish-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 35px;
+}
+
+.menu-dish .menu-dish-ingredients {
+    margin-bottom: 15px;
+    font-size: 24px;
+}

@@ -1,0 +1,26 @@
+    <!-- About Section -->
+    <section id="about" class="container content-section">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+
+                <h1>Menu</h2>
+                <div class="menu-container">
+
+                    <div class="menu-column col-lg-12>
+                        {% for menuItem in site.data.menu %}
+                            <div class="menu-dish-container">
+                                <div class="menu-dish">
+                                    <div class="menu-dish-header">
+                                        <h2>{{ forloop.index }}. {{ menuItem.dish }}</h2>
+                                        <h2 class="menu-dish-price">{{ menuItem.price }}</h2> 
+                                    </div>
+                                    <p class="menu-dish-ingredients">{{ menuItem.ingredients }}</p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
