@@ -2,12 +2,12 @@
 <section id="about" class="container content-section">
     <div class="row">
         
-        <div class="menu-container col-xs-12">
+        <div id="menu-pizza" class="menu-container col-xs-12">
                 <div class="menu-header">
                         <h1>PIZZA 33cm</h1>
                 </div>
             <div class="menu-column">
-                {% assign pizza_menu_size = site.data.pizza_menu.size | divided_by:2 %}
+                {% assign pizza_menu_size = site.data.pizza_menu.size | minus:1 | divided_by:2 %}
                 <div class="col-lg-6">
                     {% for menuItem in site.data.pizza_menu limit:pizza_menu_size %}
                     <div class="menu-dish-container">
@@ -23,28 +23,32 @@
                 </div>
                 <div class="col-lg-6">
                     {% for menuItem in site.data.pizza_menu offset:pizza_menu_size %}
-                    <div class="menu-dish-container">
-                        <div class="menu-dish">
-                            <div class="menu-dish-header">
-                                <h2>{{ forloop.index | plus:pizza_menu_size }}. {{ menuItem.name }}</h2>
-                                <h2 class="menu-dish-price">{{ menuItem.price }}</h2>
+                        {% if forloop.last %}
+                        <div class="menu-dish-container">
+                            <div class="menu-dish"> 
+                                <div class="menu-dish-header">                            
+                                    <h2>{{ menuItem.name }}</h2>
+                                    <h2 class="menu-dish-price">{{ menuItem.price }}</h2>
+                                </div>
+                                <p class="menu-dish-ingredients">{{ menuItem.ingredients }}</p>
                             </div>
-                            <p class="menu-dish-ingredients">{{ menuItem.ingredients }}</p>
                         </div>
-                    </div>
+                        {% else %}
+                        <div class="menu-dish-container">
+                            <div class="menu-dish">
+                                <div class="menu-dish-header">
+                                    <h2>{{ forloop.index | plus:pizza_menu_size }}. {{ menuItem.name }}</h2>
+                                    <h2 class="menu-dish-price">{{ menuItem.price }}</h2>
+                                </div>
+                                <p class="menu-dish-ingredients">{{ menuItem.ingredients }}</p>
+                            </div>
+                        </div>
+                        {% endif %} 
                     {% endfor %}
-                </div>
-                <div class="menu-container col-lg-12">
-                    {% for menuItem in site.data.sauces %}
-
-                    <h3>{{ menuItem.name }}</h3>
-
-                    {% endfor %}
-                    <h3 class="menu-dish-price">2 zł</h3>
                 </div>
             </div>
         </div>
-        <div class="menu-container col-lg-6">
+        <div id="menu-child-pizza" class="menu-container">
             <div class="menu-header">
                 <h1>PIZZA DLA DZIECI 25cm</h1>
             </div>
@@ -62,7 +66,7 @@
                 {% endfor %}
             </div>
         </div>
-        <div class="menu-container col-lg-6">
+        <div id="menu-roast-sandwiches" class="menu-container">
             <div class="menu-header">
                 <h1>ZAPIEKANKI</h1>
             </div>
@@ -81,7 +85,7 @@
                 {% endfor %}
             </div>
         </div>
-        <div class="menu-container  col-lg-6">
+        <div id="menu-kebab" class="menu-container">
             <div class="menu-header">
                 <h1>KEBAB</h1>
             </div>
@@ -99,33 +103,34 @@
                 {% endfor %}
             </div>
         </div>
-        <div class="menu-container  col-lg-6">
+        <div id="menu-grill-dishes"  class="menu-container">
             <div class="menu-header">
                 <h1>DANIA Z GRILLA</h1>
             </div>
             <div class="menu-column">
-                {% for menuItem in site.data.grill_dishes %} {% if forloop.last %}
+                {% for menuItem in site.data.grill_dishes %}
+                    {% if forloop.last %}
+                        <div class="menu-dish-container">
+                            <div class="menu-dish">
 
-                <div class="menu-dish-container">
-                    <div class="menu-dish">
-
-                        <h2>Dodatki:</h2>
-                        <p class="menu-dish-ingredients">{{ menuItem.name }}</p>
-                    </div>
-                </div>
-                {% else %}
-                <div class="menu-dish-container">
-                    <div class="menu-dish">
-                        <div class="menu-dish-header">
-                            <h2>{{ forloop.index }}. {{ menuItem.name }}</h2>
-                            <h2 class="menu-dish-price">{{ menuItem.price }}</h2>
+                                <h2>Dodatki:</h2>
+                                <p class="menu-dish-ingredients">{{ menuItem.name }}</p>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                {% endif %} {% endfor %}
+                    {% else %}
+                        <div class="menu-dish-container">
+                            <div class="menu-dish">
+                                <div class="menu-dish-header">
+                                    <h2>{{ forloop.index }}. {{ menuItem.name }}</h2>
+                                    <h2 class="menu-dish-price">{{ menuItem.price }}</h2>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %} 
+                {% endfor %}
             </div>
         </div>
-        <div class="menu-container  col-lg-6">
+        <div id="menu-pasta" class="menu-container">
             <div class="menu-header">
                 <h1>MAKARON TAGIATELLE</h1>
             </div>
@@ -143,7 +148,7 @@
                 {% endfor %}
             </div>
         </div>
-        <div class="menu-container  col-lg-6">
+        <div id="menu-salads" class="menu-container">
             <div class="menu-header">
                 <h1>SAŁATKI</h1>
             </div>
@@ -161,7 +166,7 @@
                 {% endfor %}
             </div>
         </div>
-        <div class="menu-container  col-lg-6">
+        <div id="menu-burgers" class="menu-container">
             <div class="menu-header">
                 <h1>BURGERY</h1>
             </div>
@@ -180,7 +185,7 @@
             </div>
         </div>
 
-        <div class="menu-container col-lg-6">
+        <div id="menu-fires" class="menu-container">
             <div class="menu-header">
                 <h1>FRYTKI BELGIJSKIE</h1>
             </div>

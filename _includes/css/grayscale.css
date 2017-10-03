@@ -109,6 +109,48 @@ a:focus {
     background-color: rgba(255,255,255,.3);
 }
 
+.dropdown-menu {
+    box-shadow: none;
+    border: none;
+}
+
+.navbar-custom .nav .dropdown-menu>li.active> a,
+.navbar-custom .nav .dropdown-menu>li>a:focus, 
+.navbar-custom .nav .dropdown-menu>li>a:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+#navbar-menu {
+    border: 5px red;
+    margin-left: auto;
+}
+
+@media(min-width:767px) {
+    #navbar-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+    }
+}
+
+#nav-logo {
+    margin-left: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility, opacity 0.5s ease-in-out;
+    height: 50px;
+    padding: 5px;
+}
+
+.top-nav-collapse #nav-logo {
+
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
+
 @media(min-width:767px) {
     .navbar {
         padding: 20px 0;
@@ -367,4 +409,8 @@ body {
 #about {
     background: url(/img/pizza-bg.png) no-repeat right top scroll;
     background-size: 50%;
+}
+
+#main-logo {
+    width: 50%;
 }
