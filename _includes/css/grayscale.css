@@ -68,6 +68,7 @@ a:focus {
 }
 
 .navbar-custom .navbar-brand {
+    padding: 15px 0;
     font-size: 24px;
     font-weight: 700;
 }
@@ -76,14 +77,15 @@ a:focus {
     outline: 0;
 }
 
-.navbar-custom .navbar-brand .navbar-toggle {
+.navbar-custom .navbar-toggle {
+    margin-left: auto;
     padding: 4px 6px;
     font-size: 16px;
     color: #fff;
 }
 
-.navbar-custom .navbar-brand .navbar-toggle:focus,
-.navbar-custom .navbar-brand .navbar-toggle:active {
+.navbar-custom .navbar-toggle:focus,
+.navbar-custom .navbar-toggle:active {
     outline: 0;
 }
 
@@ -108,7 +110,9 @@ a:focus {
     outline: 0;
     background-color: rgba(255,255,255,.3);
 }
-
+.navbar-custom .nav li ul li a {
+    padding: 10px;
+}
 .dropdown-menu {
     box-shadow: none;
     border: none;
@@ -121,11 +125,6 @@ a:focus {
     background-color: #000;
 }
 
-#navbar-menu {
-    border: 5px red;
-    margin-left: auto;
-}
-
 @media(min-width:767px) {
     #navbar-container{
         display: flex;
@@ -133,22 +132,36 @@ a:focus {
         align-items: flex-start;
 
     }
+    #navbar-menu {
+        margin-left: auto;
+    }
 }
 
 #nav-logo {
-    margin-left: auto;
-    visibility: hidden;
     opacity: 0;
-    transition: visibility, opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in, opacity 0.5s ease-in-out;
     height: 50px;
     padding: 5px;
 }
 
 .top-nav-collapse #nav-logo {
-
     visibility: visible;
     opacity: 1;
-    transition: opacity 0.5s ease-in;
+    transition: opacity 0.5s ease-in, opacity 0.5s ease-in-out;
+}
+.navbar-header {
+    display: flex;
+}
+.navbar-logo-container {
+    margin-left: auto;
+    padding-left: 15px;
+}
+
+@media(max-width:767px) {
+    .navbar-header {
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 @media(min-width:767px) {
