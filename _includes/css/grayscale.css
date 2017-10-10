@@ -95,7 +95,6 @@ a:focus {
 
 .navbar-custom .nav li.active {
     outline: none;
-    background-color: rgba(255,255,255,.3);
 }
 
 .navbar-custom .nav li a {
@@ -117,8 +116,10 @@ a:focus {
     box-shadow: none;
     border: none;
 }
-
-.navbar-custom .nav .dropdown-menu>li.active> a,
+.navbar-custom .navbar-collapse {
+    max-height: 100%;
+}
+.navbar-custom .nav .dropdown-menu>li> a,
 .navbar-custom .nav .dropdown-menu>li>a:focus, 
 .navbar-custom .nav .dropdown-menu>li>a:hover {
     color: #fff;
@@ -126,6 +127,10 @@ a:focus {
 }
 
 @media(min-width:767px) {
+    .navbar-custom .nav .dropdown-menu>li> a {
+        color: #000;
+        background-color: #fff;
+    }
     #navbar-container{
         display: flex;
         justify-content: space-between;
@@ -135,6 +140,9 @@ a:focus {
     #navbar-menu {
         margin-left: auto;
     }
+}
+@media(max-width: 767px){
+    
 }
 
 #nav-logo {
@@ -154,7 +162,6 @@ a:focus {
 }
 .navbar-logo-container {
     margin-left: auto;
-    padding-left: 15px;
 }
 
 @media(max-width:767px) {
@@ -182,6 +189,9 @@ a:focus {
 
     .navbar-custom.top-nav-collapse {
         border-bottom: 1px solid rgba(255,255,255,.3);
+    }
+    .navbar-logo-container {
+        padding-left: 15px;
     }
 }
 
@@ -323,7 +333,6 @@ a:focus {
 #map {
     width: 100%;
     height: 200px;
-    margin-top: 100px;
 }
 
 @media(min-width:767px) {
@@ -334,7 +343,6 @@ a:focus {
 
     #map {
         height: 400px;
-        margin-top: 250px;
     }
 }
 
@@ -426,4 +434,14 @@ body {
 
 #main-logo {
     width: 50%;
+}
+.contact-header {
+    margin-top: 100px;
+}
+
+address {
+    font-size: 25px;
+}
+address a{
+    color:  #333;
 }
