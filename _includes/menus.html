@@ -1,0 +1,216 @@
+<!-- About Section -->
+<section id="about" class="container content-section menu-pizza-bg">
+    <div class="row">
+        
+        <div id="menu-pizza" class="menu-container col-xs-12">
+                <div class="menu-header">
+                        <h1>PIZZA 33cm</h1>
+                </div>
+            <div class="menu-column">
+                {% assign pizza_menu_size = site.data.pizza_menu.size | minus:1 | divided_by:2 %}
+                <div class="col-lg-6">
+                    {% for menuItem in site.data.pizza_menu limit:pizza_menu_size %}
+                    <div class="menu-dish-container">
+                        <div class="menu-dish">
+                            <div class="menu-dish-header">
+                                <h2>{{ forloop.index }}. {{ menuItem.name }}</h2>
+                                <h2 class="menu-dish-price">{{ menuItem.price }}</h2>
+                            </div>
+                            <p class="menu-dish-ingredients">{{ menuItem.ingredients }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="col-lg-6">
+                    {% for menuItem in site.data.pizza_menu offset:pizza_menu_size %}
+                        {% if forloop.last %}
+                        {% else %}
+                        <div class="menu-dish-container">
+                            <div class="menu-dish">
+                                <div class="menu-dish-header">
+                                    <h2>{{ forloop.index | plus:pizza_menu_size }}. {{ menuItem.name }}</h2>
+                                    <h2 class="menu-dish-price">{{ menuItem.price }}</h2>
+                                </div>
+                                <p class="menu-dish-ingredients">{{ menuItem.ingredients }}</p>
+                            </div>
+                        </div>
+                        {% endif %} 
+                    {% endfor %}
+                </div>
+                <div class="col-lg-12">
+                    <div class="menu-dish-container">
+                        <div class="menu-dish"> 
+                            <div class="menu-dish-header">                            
+                                <h2>{{ site.data.pizza_menu.last.name }}</h2>
+                                <h2 class="menu-dish-price">{{ site.data.pizza_menu.last.price }}</h2>
+                            </div>
+                            <p class="menu-dish-ingredients">{{ site.data.pizza_menu.last.ingredients }}</p>
+                            <p class="menu-dish-ingredients">*Możesz zmieniać składniki, jeżeli zrezygnujesz z któregoś ze składników pizzy obniżymy cenę o połowę jego wartości</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="menu-child-pizza" class="menu-container col-xs-12">
+            <div class="menu-cup-bg"></div>
+            <div class="menu-header">
+                <h1>PIZZA DLA DZIECI 25cm</h1>
+            </div>
+            <div class="menu-column ">
+                {% for menuItem in site.data.child_pizza_menu %}
+                <div class="menu-dish-container">
+                    <div class="menu-dish">
+                        <div class="menu-dish-header">
+                            <h2>{{ forloop.index }}. {{ menuItem.name }}</h2>
+                            <h2 class="menu-dish-price">{{ menuItem.price }}</h2>
+                        </div>
+                        <p class="menu-dish-ingredients">{{ menuItem.ingredients }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div id="menu-roast-sandwiches" class="menu-container col-xs-12">
+            <div class="menu-cheese-bg"></div>
+            <div class="menu-header">
+                <h1>ZAPIEKANKI</h1>
+            </div>
+            <div class="menu-column ">
+                {% for menuItem in site.data.roast_sandwich_menu %}
+                <div class="menu-dish-container">
+                    <div class="menu-dish">
+                        <div class="menu-dish-header">
+                            <h2>{{ forloop.index }}. </h2>
+                            <h2 class="menu-dish-price">{{ menuItem.price }}</h2>
+                        </div>
+
+                        <p class="menu-dish-ingredients">{{ menuItem.ingredients }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div id="menu-kebab" class="menu-container col-xs-12">
+            <div class="menu-best-bg"></div>
+            <div class="menu-header">
+                <h1>KEBAB</h1>
+            </div>
+            <div class="menu-column">
+                {% for menuItem in site.data.kebab_menu %}
+                <div class="menu-dish-container">
+                    <div class="menu-dish">
+                        <div class="menu-dish-header">
+                            <h2>{{ forloop.index }}. {{ menuItem.name }}</h2>
+                            <h2 class="menu-dish-price">{{ menuItem.price }}</h2>
+                        </div>
+                        <p class="menu-dish-ingredients">{{ menuItem.ingredients }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div id="menu-grill-dishes"  class="menu-container col-xs-12">
+            <div class="menu-special-bg"></div>
+            <div class="menu-header">
+                <h1>DANIA Z GRILLA</h1>
+            </div>
+            <div class="menu-column">
+                {% for menuItem in site.data.grill_dishes %}
+                    {% if forloop.last %}
+                        <div class="menu-dish-container">
+                            <div class="menu-dish">
+
+                                <h2>Dodatki:</h2>
+                                <p class="menu-dish-ingredients">{{ menuItem.name }}</p>
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="menu-dish-container">
+                            <div class="menu-dish">
+                                <div class="menu-dish-header">
+                                    <h2>{{ forloop.index }}. {{ menuItem.name }}</h2>
+                                    <h2 class="menu-dish-price">{{ menuItem.price }}</h2>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %} 
+                {% endfor %}
+            </div>
+        </div>
+        <div id="menu-pasta" class="menu-container col-xs-12">
+            <div class="menu-fork-bg"></div>
+            <div class="menu-header">
+                <h1>MAKARON TAGIATELLE</h1>
+            </div>
+            <div class="menu-column">
+                {% for menuItem in site.data.pasta %}
+                <div class="menu-dish-container">
+                    <div class="menu-dish">
+                        <div class="menu-dish-header">
+                            <h2>{{ forloop.index }}. {{ menuItem.name }}</h2>
+                            <h2 class="menu-dish-price">{{ menuItem.price }}</h2>
+                        </div>
+                        <p class="menu-dish-ingredients">{{ menuItem.ingredients }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div id="menu-salads" class="menu-container col-xs-12">
+            <div class="menu-pepper-bg"></div>
+            <div class="menu-header">
+                <h1>SAŁATKI</h1>
+            </div>
+            <div class="menu-column">
+                {% for menuItem in site.data.salads %}
+                <div class="menu-dish-container">
+                    <div class="menu-dish">
+                        <div class="menu-dish-header">
+                            <h2>{{ forloop.index }}. {{ menuItem.name }}</h2>
+                            <h2 class="menu-dish-price">{{ menuItem.price }}</h2>
+                        </div>
+                        <p class="menu-dish-ingredients">{{ menuItem.ingredients }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div id="menu-burgers" class="menu-container col-xs-12">
+            <div class="menu-burger-bg"></div>
+            <div class="menu-header">
+                <h1>BURGERY</h1>
+            </div>
+            <div class="menu-column">
+                {% for menuItem in site.data.burgers %}
+                <div class="menu-dish-container">
+                    <div class="menu-dish">
+                        <div class="menu-dish-header">
+                            <h2>{{ forloop.index }}. {{ menuItem.name }}</h2>
+                            <h2 class="menu-dish-price">{{ menuItem.price }}</h2>
+                        </div>
+                        <p class="menu-dish-ingredients">{{ menuItem.ingredients }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div id="menu-fires" class="menu-container col-xs-12">
+            <div class="menu-fires-bg"></div>
+            <div class="menu-header">
+                <h1>FRYTKI BELGIJSKIE</h1>
+            </div>
+            <div class="menu-column ">
+                <div class="menu-dish-container">
+                    <div class="menu-dish">
+                        <div class="menu-dish-header">
+                            <p class="menu-dish-ingredients">smażone na tłuszczu wołowym </p>
+                            <h2 class="menu-dish-price">7 zł</h2>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
