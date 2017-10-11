@@ -576,3 +576,28 @@ address a{
         background-size: 9%;
     }
 }
+#delivery h2 {
+    margin-top: 45px;
+
+}
+.delivery-info {
+    padding: 20px;
+    border: 2px dashed #f3f1ed;
+    font-size: 24px;
+}
+.delivery-info span{
+    font-size: 18px;
+}
+.contact-fb {
+    font-size: 25px;
+}
+.contact-fb a, 
+.contact-fb a:hover, 
+.contact-fb a:visited, 
+.contact-fb a:focus {
+    font-size: 25px;
+    color: #000;
+}
+.fb-icon {
+    width: 50px;
+}

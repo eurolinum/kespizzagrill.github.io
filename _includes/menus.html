@@ -24,15 +24,6 @@
                 <div class="col-lg-6">
                     {% for menuItem in site.data.pizza_menu offset:pizza_menu_size %}
                         {% if forloop.last %}
-                        <div class="menu-dish-container">
-                            <div class="menu-dish"> 
-                                <div class="menu-dish-header">                            
-                                    <h2>{{ menuItem.name }}</h2>
-                                    <h2 class="menu-dish-price">{{ menuItem.price }}</h2>
-                                </div>
-                                <p class="menu-dish-ingredients">{{ menuItem.ingredients }}</p>
-                            </div>
-                        </div>
                         {% else %}
                         <div class="menu-dish-container">
                             <div class="menu-dish">
@@ -45,6 +36,18 @@
                         </div>
                         {% endif %} 
                     {% endfor %}
+                </div>
+                <div class="col-lg-12">
+                    <div class="menu-dish-container">
+                        <div class="menu-dish"> 
+                            <div class="menu-dish-header">                            
+                                <h2>{{ site.data.pizza_menu.last.name }}</h2>
+                                <h2 class="menu-dish-price">{{ site.data.pizza_menu.last.price }}</h2>
+                            </div>
+                            <p class="menu-dish-ingredients">{{ site.data.pizza_menu.last.ingredients }}</p>
+                            <p class="menu-dish-ingredients">*Możesz zmieniać składniki, jeżeli zrezygnujesz z któregoś ze składników pizzy obniżymy cenę o połowę jego wartości</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
