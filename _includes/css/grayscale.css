@@ -422,14 +422,25 @@ img::selection {
 img::-moz-selection {
     background: 0 0;
 }
+.scroll-to-menu-arrow, 
+.scroll-to-menu-arrow:hover, 
+.scroll-to-menu-arrow:visited, 
+.scroll-to-menu-arrow:focus {
+    font-size: 25px;
+    color: #fff;
+}
+.scroll-to-menu-arrow span {
+    display: block;
+}
 
 body {
     webkit-tap-highlight-color: rgba(255,255,255,.2);
 }
 
-#about {
-    background: url(/img/pizza-bg.png) no-repeat right top scroll;
-    background-size: 50%;
+@media (max-width: 767px) {
+    #about {
+        overflow-x: hidden;
+    }
 }
 
 #main-logo {
@@ -444,4 +455,124 @@ address {
 }
 address a{
     color:  #333;
+}
+
+.menu-content {
+    position: relative;
+}
+
+.menu-pizza-bg {
+    background: url(/img/pizza-bg.png) no-repeat right top scroll;
+    background-size: 77%;
+    z-index: -1;
+}
+
+.menu-fork-bg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: url(/img/fork-bg.png) no-repeat right top scroll;
+    background-size: 36%;
+    z-index: -1;
+}
+
+.menu-best-bg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: url(/img/best-bg.png) no-repeat right top scroll;
+    background-size: 36%;
+    z-index: -1;
+}
+
+.menu-cup-bg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: url(/img/cup-bg.png) no-repeat right top scroll;
+    background-size: 36%;
+    z-index: -1;
+}
+
+.menu-cheese-bg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: url(/img/cheese-bg.png) no-repeat right top scroll;
+    background-size: 36%;
+    z-index: -1;
+}
+
+.menu-burger-bg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: url(/img/burger-bg.png) no-repeat right top scroll;
+    background-size: 36%;
+    z-index: -1;
+}
+
+.menu-pepper-bg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: url(/img/pepper-bg.png) no-repeat right top scroll;
+    background-size: 45%;
+    z-index: -1;
+}
+
+.menu-special-bg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: url(/img/special-text-bg.png) no-repeat right top scroll;
+    background-size: 21%;
+    z-index: -1;
+}
+
+.menu-fires-bg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: url(/img/fires-bg.png) no-repeat right top scroll;
+    background-size: 30%;
+    z-index: -1;
+}
+
+@media(min-width:767px) {
+    .menu-pizza-bg {
+        background-size: 40%;
+    }
+
+    .menu-best-bg {
+        background-size: 11%;
+    }
+
+    .menu-cup-bg {
+        background-size: 5%;
+    }
+
+    .menu-cheese-bg {
+        background-size: 12%;
+    }
+
+    .menu-fork-bg {
+        background-size: 20%;
+    }
+
+    .menu-burger-bg {
+        background-size: 10%;
+    }
+
+    .menu-pepper-bg {
+        background-size: 12%;
+    }
+
+    .menu-special-bg {
+        background-size: 12%;
+    }
+
+    .menu-fires-bg {
+        background-size: 9%;
+    }
 }
