@@ -3,7 +3,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ site.description }}">
+    <meta name="description" content="Kęs Pizza & Grill. Pizza, dania z grila, burgery, frytki. Gniezno">
+    <meta name="keywords" content="pizza, gniezno, dania z grila, burgery, frytki">
+
+    <meta property="og:title" content="Kęs Pizza & Grill" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kespizza.pl/" />
+    <meta property="og:image" content="https://kespizza.pl/img/intro-bg.jpg" />
+    <meta property="og:description" content="Kęs Pizza & Grill. Pizza, dania z grila, burgery, frytki." /> 
+    <meta property="og:site_name" content="Kęs Pizza & Grill" />
+
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
     <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
@@ -11,13 +20,9 @@
 
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="{{ "/css/font-awesome/css/font-awesome.min.css" | prepend: site.baseurl }}">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin-ext" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&subset=latin-ext" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Patrick+Hand+SC&subset=latin-ext" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700&subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ "/css/flaticon/flaticon.css" | prepend: site.baseurl }}"> 
-    <script src="//use.edgefonts.net/love-ya-like-a-sister:n4:all.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
