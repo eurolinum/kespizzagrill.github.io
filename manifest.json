@@ -1,0 +1,102 @@
+{
+    "dir": "ltr",
+    "lang": "pl",
+    "name": "Kęs Pizza & Grill",
+    "scope": "/",
+    "display": "browser",
+    "start_url": "https://kespizza.pl/",
+    "short_name": "Kes pizza",
+    "theme_color": "transparent",
+    "description": "Kęs Pizza & Grill. Pizza, dania z grila, burgery, frytki. Gniezno",
+    "orientation": "any",
+    "background_color": "transparent",
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "/images/72b5d51e-f4f3-e0f9-d81a-3a1beaf47c02.webPlatform.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/24dc4c42-a16a-3329-873b-c6731871bb2b.webPlatform.png",
+            "sizes": "1240x600",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/8e27df02-c936-f3bb-9269-75bb6f0932da.webPlatform.png",
+            "sizes": "300x300",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/32a19dbf-df48-ddba-7ec6-f7872971609a.webPlatform.png",
+            "sizes": "88x88",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/5105fcf2-923f-8b1e-a6b8-bbb091417473.webPlatform.png",
+            "sizes": "24x24",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/9387e3d8-e72f-6682-8a32-02408b6cc849.webPlatform.png",
+            "sizes": "50x50",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/1f6806f5-a6c4-eea6-0c7e-885aca76ea95.webPlatform.png",
+            "sizes": "620x300",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/9be7b94b-ead4-9036-da62-1cf30e231168.webPlatform.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/c73045c0-bc7f-fb42-97b3-c21d59f52b17.webPlatform.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/9c1c1b0e-a32f-706e-0881-b3ed49d2c921.webPlatform.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/e9106778-d527-1ea1-b098-ecf9a4c86aa0.webPlatform.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/a574bc8f-afbd-052c-752d-362ea4dfa92f.webPlatform.png",
+            "sizes": "36x36",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/98d467ae-b7c8-1644-647a-0327ff8cd5c8.webPlatform.png",
+            "sizes": "1024x1024",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/bd647d94-ff54-f774-e867-bd7ea5cb04de.webPlatform.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/1a857f82-9d04-624d-489e-4c1daee8a932.webPlatform.png",
+            "sizes": "152x152",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/83804603-a74a-53a7-ca9a-1d085582ab0c.webPlatform.png",
+            "sizes": "120x120",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/3aa3aa33-82a6-4d6b-c6bf-a512175320f3.webPlatform.png",
+            "sizes": "76x76",
+            "type": "image/png"
+        }
+    ]
+}
